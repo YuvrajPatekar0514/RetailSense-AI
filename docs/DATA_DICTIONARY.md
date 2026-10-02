@@ -3,8 +3,8 @@
 > [!NOTE]
 > **DEMO / SYNTHETIC DATA LABEL**
 > The files located in `data/generated/` are **controlled synthetic supporting datasets** engineered to populate relational entities (Products, Suppliers, Customers, Orders, Returns, Promotions) for multi-agent autonomous decision workflows.
-> 
-> The primary raw transaction dataset (`data/raw/ecommerce_transactions.csv`) remains untouched as the authoritative real baseline dataset.
+>
+> The raw transaction dataset (`data/raw/ecommerce_transactions.csv`) is an input used by processing/seeding. Its provenance and redistribution rights were not independently verified during this audit; do not describe it as real, synthetic, or publication-safe without confirming its source.
 
 ---
 

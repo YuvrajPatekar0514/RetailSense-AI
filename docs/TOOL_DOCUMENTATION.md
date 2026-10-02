@@ -1,110 +1,43 @@
-# RetailSense AI — Agent Tool Layer Specification & API Reference
+# Agent Tool Reference
 
-## 1. Overview & Tool Execution Guarantees
+`tools/registry.py` lists 23 domain functions in `ALL_TOOLS`. Agents currently import and call functions directly; the registry's seller/customer/admin tool-name lists are not enforced by the graph. Functions are local Python code, not standalone HTTP services.
 
-In **RetailSense AI**, autonomous agents (Seller Agent, Customer Agent, Admin Overseer Agent) interact with system repositories, databases, and ML models strictly through **explicit, encapsulated function tools**.
+## Tool Families
 
-> [!IMPORTANT]
-> **SECURITY & TOOL SAFETY PRINCIPLES**:
-> 1. **No Direct DB Mutations**: Agents cannot run arbitrary SQL or directly mutate database tables.
-> 2. **Pydantic Input Validation**: Every tool validates argument data types and value boundaries using Pydantic schemas.
-> 3. **Structured Response Output**: Every tool returns a uniform `ToolResponse` object (`success`, `tool_name`, `data`, `error`, `execution_timestamp`).
-> 4. **Execution Logging**: All tool invocations, input parameters, and execution outcomes are logged to system audit logs.
-> 5. **Credential Protection**: Database connection strings, API keys, and environment secrets are never exposed in tool outputs.
+| Module | Functions in the registry | Purpose |
+|---|---|---|
+| `tools/sales_tools.py` | `get_sales_history`, `get_product_sales`, `get_store_sales` | Read transaction aggregates/history |
+| `tools/demand_tools.py` | `forecast_demand_tool` (`forecast_demand` registry key) | Load the demand predictor for inference |
+| `tools/inventory_tools.py` | `get_inventory`, `calculate_stockout_risk`, `calculate_overstock_risk`, `calculate_reorder_quantity` | Read stock and calculate risk/reorder values |
+| `tools/product_tools.py` | `search_products`, `get_product_details` | Search/read catalog items |
+| `tools/supplier_tools.py` | `get_suppliers_for_product`, `compare_suppliers`, `calculate_procurement_cost` | Compare supplier attributes and estimate order cost |
+| `tools/pricing_tools.py` | `get_current_price`, `get_sales_trend`, `simulate_promotion` | Read pricing/trends and simulate a discount |
+| `tools/customer_tools.py` | `get_customer_profile`, `get_customer_purchase_history`, `recommend_products` | Read profile/orders and apply category/loyalty recommendation rules |
+| `tools/order_tools.py` | `get_order`, `get_order_status` | Read order details and status |
+| `tools/return_tools.py` | `check_return_eligibility`, `create_return_request` | Evaluate eligibility and write a return request |
 
----
+## Response and Execution
 
-## 2. Standardized Response Format
+`tools/base.py` defines a Pydantic `ToolResponse` with `success`, `tool_name`, `data`, `error`, and an execution timestamp. Many domain functions use this response and convert it to JSON-safe data. The helper `make_json_safe` handles dates, NumPy values, containers, and Pydantic objects.
 
-All 22 tools return a JSON payload adhering to the `ToolResponse` schema:
+Input validation is not uniform across every function. Some inputs use Pydantic models and bounds; other functions accept primitive arguments directly. Error handling is implemented in individual tool functions, so consumers should check `success` and not assume `data` is populated. Some agent nodes currently assume nested response keys exist.
 
-```json
-{
-  "success": true,
-  "tool_name": "forecast_demand",
-  "data": {
-    "product_id": "PROD_BEA_001",
-    "prediction_horizon_days": 7,
-    "predicted_demand_daily": [9.52, 9.63, 9.67, 9.65, 9.56, 9.42, 9.27],
-    "total_predicted_units": 66.72,
-    "model_name": "Random Forest Regressor"
-  },
-  "error": null,
-  "execution_timestamp": "2026-10-01T23:31:09.382000"
-}
-```
+`run_async` runs async repository work from the synchronous tool functions. Tool modules use SQLAlchemy sessions and repository helpers for reads. The return request tool writes to the return repository. Tools do not execute arbitrary model-generated SQL, but they are not read-only.
 
----
+## Agent-to-Tool Calls
 
-## 3. Tool Manifest by Functional Domain
+- Demand node: `forecast_demand_tool`.
+- Inventory node: `get_inventory`, `calculate_stockout_risk`, `calculate_reorder_quantity`; it imports but does not call `calculate_overstock_risk`.
+- Procurement node: `compare_suppliers`, `calculate_procurement_cost`; it does not submit a purchase order.
+- Pricing node: `get_current_price`, `get_sales_trend`, `simulate_promotion` with a fixed 15% example discount.
+- Personalization node: `get_customer_profile`, `recommend_products`.
+- Support node: `get_order`, `get_order_status`.
+- Returns node: `check_return_eligibility` and, when eligible, `create_return_request`.
 
-### 3.1 Sales Tools (`tools/sales_tools.py`)
-- `get_sales_history(category=None, limit=100)`: Retrieves historical sales transaction records and overall GMV metrics.
-- `get_product_sales(product_id, limit=50)`: Retrieves sales volume and revenue history for a specific product or category.
-- `get_store_sales(store_id, limit=50)`: Retrieves regional sales performance for a retail store hub.
+See [AI_AGENTS.md](AI_AGENTS.md) for node behavior and assumptions.
 
-### 3.2 Demand Tools (`tools/demand_tools.py`)
-- `forecast_demand(product_id, store_id="STORE_USA", horizon_days=7)`: Predicts multi-day future unit demand using trained Random Forest / XGBoost ML models.
+## Logging, Persistence, and Security
 
-### 3.3 Inventory Tools (`tools/inventory_tools.py`)
-- `get_inventory(product_id, store_id="STORE_USA")`: Queries current stock levels, safety stock, and reorder points.
-- `calculate_stockout_risk(product_id, store_id="STORE_USA", horizon_days=7)`: Computes stockout probability risk score based on stock vs forecast demand.
-- `calculate_overstock_risk(product_id, store_id="STORE_USA", horizon_days=30)`: Computes overstock risk score and capital lockup indicators.
-- `calculate_reorder_quantity(product_id, store_id="STORE_USA", target_days_cover=14)`: Calculates optimal reorder quantity considering lead time and MOQ.
+Tool functions use Python's `RetailSenseTools` logger. The agent runner's `tool_results` and `audit_trail` are in-memory state returned in the response. The current execution path does not persist every invocation to the `ToolCall` or `AgentRun` ORM models despite those tables existing.
 
-### 3.4 Product Tools (`tools/product_tools.py`)
-- `search_products(query=None, category=None, limit=50)`: Searches catalog products by keyword or category.
-- `get_product_details(product_id)`: Retrieves full product specs, selling price, warranty, and returnability rules.
-
-### 3.5 Supplier Tools (`tools/supplier_tools.py`)
-- `get_suppliers_for_product(product_id)`: Lists vendor suppliers offering a specific catalog item.
-- `compare_suppliers(product_id)`: Ranks suppliers by unit cost, lead time, and reliability score to identify the optimal vendor.
-- `calculate_procurement_cost(product_id, quantity, supplier_id=None)`: Computes total wholesale order cost, shipping estimates, and expected lead times.
-
-### 3.6 Pricing Tools (`tools/pricing_tools.py`)
-- `get_current_price(product_id)`: Retrieves selling price, cost price, and gross profit margin.
-- `get_sales_trend(target, days=30)`: Analyzes recent sales trend direction (UPWARD / STABLE / DOWNWARD).
-- `simulate_promotion(product_id, discount_pct, duration_days=7)`: Simulates unit lift, promotional revenue, and profit margin delta.
-
-### 3.7 Customer Tools (`tools/customer_tools.py`)
-- `get_customer_profile(customer_id)`: Retrieves customer demographic profile, city, and loyalty tier.
-- `get_customer_purchase_history(customer_id, limit=50)`: Retrieves past orders and total lifetime spend.
-- `recommend_products(customer_id, top_n=5)`: Generates personalized product recommendations with loyalty discounts.
-
-### 3.8 Order Tools (`tools/order_tools.py`)
-- `get_order(order_id)`: Retrieves full order details, pricing, items, and status.
-- `get_order_status(order_id)`: Retrieves current order delivery tracking status.
-
-### 3.9 Return Tools (`tools/return_tools.py`)
-- `check_return_eligibility(order_id)`: Evaluates order return eligibility based on delivery status, 30-day return window, and product policy.
-- `create_return_request(order_id, return_reason)`: Files an approved return request and generates refund instructions.
-
----
-
-## 4. Agent Role Permission Matrix (`tools/registry.py`)
-
-| Tool Name | Seller Agent | Customer Agent | Admin Overseer Agent |
-| :--- | :---: | :---: | :---: |
-| `get_sales_history` | ✅ | ❌ | ✅ |
-| `get_product_sales` | ✅ | ❌ | ✅ |
-| `get_store_sales` | ✅ | ❌ | ✅ |
-| `forecast_demand` | ✅ | ❌ | ✅ |
-| `get_inventory` | ✅ | ❌ | ✅ |
-| `calculate_stockout_risk` | ✅ | ❌ | ✅ |
-| `calculate_overstock_risk` | ✅ | ❌ | ✅ |
-| `calculate_reorder_quantity` | ✅ | ❌ | ✅ |
-| `search_products` | ✅ | ✅ | ✅ |
-| `get_product_details` | ✅ | ✅ | ✅ |
-| `get_suppliers_for_product` | ✅ | ❌ | ✅ |
-| `compare_suppliers` | ✅ | ❌ | ✅ |
-| `calculate_procurement_cost` | ✅ | ❌ | ✅ |
-| `get_current_price` | ✅ | ✅ | ✅ |
-| `get_sales_trend` | ✅ | ❌ | ✅ |
-| `simulate_promotion` | ✅ | ❌ | ✅ |
-| `get_customer_profile` | ❌ | ✅ | ✅ |
-| `get_customer_purchase_history` | ❌ | ✅ | ✅ |
-| `recommend_products` | ❌ | ✅ | ✅ |
-| `get_order` | ✅ | ✅ | ✅ |
-| `get_order_status` | ❌ | ✅ | ✅ |
-| `check_return_eligibility` | ❌ | ✅ | ✅ |
-| `create_return_request` | ❌ | ✅ | ✅ |
+The registry's role lists are descriptive metadata only; graph execution does not consult them. API authentication is also not supplied by the tool registry. Protect the HTTP endpoints that expose tools, especially agent execution and data-changing operations. See [API_GUIDE.md](API_GUIDE.md) and [SECURITY.md](SECURITY.md).
