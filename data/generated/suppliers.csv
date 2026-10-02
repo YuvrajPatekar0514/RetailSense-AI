@@ -1,0 +1,63 @@
+supplier_id,supplier_name,product_id,unit_cost,lead_time_days,minimum_order_qty,available_quantity,reliability_score,city
+SUP_001,Pacific Traders (Beauty),PROD_BEA_001,191.95,13,10,291,0.98,Berlin
+SUP_002,Apex Supply Corp (Beauty),PROD_BEA_001,201.66,10,25,1870,0.88,New York
+SUP_003,Vanguard Wholesale (Beauty),PROD_BEA_002,213.97,9,50,1997,0.95,Mumbai
+SUP_004,Vanguard Wholesale (Beauty),PROD_BEA_003,33.84,14,100,417,0.84,Berlin
+SUP_005,Global Logistics Inc (Beauty),PROD_BEA_003,33.25,11,10,1631,0.86,New York
+SUP_006,Pacific Traders (Beauty),PROD_BEA_004,217.62,11,25,216,0.98,Toronto
+SUP_007,Apex Supply Corp (Beauty),PROD_BEA_004,190.86,4,25,926,0.82,Mexico City
+SUP_008,Pacific Traders (Beauty),PROD_BEA_005,106.18,12,10,958,0.92,Mexico City
+SUP_009,Nexus Distribution (Books),PROD_BOO_001,77.05,14,50,588,0.85,London
+SUP_010,Nexus Distribution (Books),PROD_BOO_001,80.19,4,10,1038,0.92,Mexico City
+SUP_011,Global Logistics Inc (Books),PROD_BOO_002,115.02,11,50,371,0.98,Toronto
+SUP_012,Nexus Distribution (Books),PROD_BOO_003,220.08,10,50,1352,0.99,Sao Paulo
+SUP_013,Pacific Traders (Books),PROD_BOO_004,97.43,13,10,1898,0.83,Toronto
+SUP_014,Pacific Traders (Books),PROD_BOO_005,29.89,7,25,1569,0.87,Paris
+SUP_015,Nexus Distribution (Clothing),PROD_CLO_001,267.72,3,10,1399,0.88,Paris
+SUP_016,Global Logistics Inc (Clothing),PROD_CLO_001,232.76,5,50,430,0.94,Sao Paulo
+SUP_017,Pacific Traders (Clothing),PROD_CLO_002,96.68,4,25,1217,0.81,Tokyo
+SUP_018,Pacific Traders (Clothing),PROD_CLO_002,105.41,9,25,185,0.86,New York
+SUP_019,Apex Supply Corp (Clothing),PROD_CLO_003,204.68,13,10,824,0.95,Sydney
+SUP_020,Pacific Traders (Clothing),PROD_CLO_003,206.75,6,25,1738,0.95,Sydney
+SUP_021,Apex Supply Corp (Clothing),PROD_CLO_004,150.03,8,100,1742,0.93,Berlin
+SUP_022,Apex Supply Corp (Clothing),PROD_CLO_005,65.1,4,100,1886,0.81,Mumbai
+SUP_023,Apex Supply Corp (Clothing),PROD_CLO_005,59.46,10,50,725,0.96,Berlin
+SUP_024,Global Logistics Inc (Electronics),PROD_ELE_001,34.23,9,50,670,0.96,Paris
+SUP_025,Pacific Traders (Electronics),PROD_ELE_002,177.66,11,50,156,0.82,Paris
+SUP_026,Apex Supply Corp (Electronics),PROD_ELE_002,182.68,7,10,322,0.91,Tokyo
+SUP_027,Vanguard Wholesale (Electronics),PROD_ELE_003,85.26,11,10,888,0.97,Berlin
+SUP_028,Nexus Distribution (Electronics),PROD_ELE_003,78.01,9,10,1164,0.98,Sao Paulo
+SUP_029,Nexus Distribution (Electronics),PROD_ELE_004,87.58,13,50,1376,0.86,Toronto
+SUP_030,Pacific Traders (Electronics),PROD_ELE_005,219.92,9,50,924,0.93,Sao Paulo
+SUP_031,Apex Supply Corp (Electronics),PROD_ELE_005,215.83,13,100,1487,0.94,London
+SUP_032,Vanguard Wholesale (Grocery),PROD_GRO_001,146.92,3,50,687,0.84,Mexico City
+SUP_033,Pacific Traders (Grocery),PROD_GRO_001,149.31,10,100,1005,0.93,Sao Paulo
+SUP_034,Apex Supply Corp (Grocery),PROD_GRO_002,243.63,7,50,291,0.96,Berlin
+SUP_035,Nexus Distribution (Grocery),PROD_GRO_002,227.75,6,25,150,0.81,Mumbai
+SUP_036,Vanguard Wholesale (Grocery),PROD_GRO_003,81.52,13,25,1571,0.93,Mumbai
+SUP_037,Apex Supply Corp (Grocery),PROD_GRO_004,221.88,14,10,1928,0.94,Toronto
+SUP_038,Vanguard Wholesale (Grocery),PROD_GRO_004,224.45,14,100,202,0.91,Toronto
+SUP_039,Apex Supply Corp (Grocery),PROD_GRO_005,146.22,13,50,1646,0.97,Mexico City
+SUP_040,Pacific Traders (Grocery),PROD_GRO_005,138.16,11,100,1937,0.83,Mumbai
+SUP_041,Nexus Distribution (Home & Kitchen),PROD_HOM_001,352.57,13,50,1668,0.95,Mumbai
+SUP_042,Apex Supply Corp (Home & Kitchen),PROD_HOM_001,327.66,4,50,580,0.85,Tokyo
+SUP_043,Apex Supply Corp (Home & Kitchen),PROD_HOM_002,37.68,9,25,1546,0.84,Sydney
+SUP_044,Nexus Distribution (Home & Kitchen),PROD_HOM_003,318.1,9,10,523,0.96,Sydney
+SUP_045,Pacific Traders (Home & Kitchen),PROD_HOM_003,337.71,3,100,1076,0.8,Tokyo
+SUP_046,Vanguard Wholesale (Home & Kitchen),PROD_HOM_004,210.96,9,25,1099,0.84,Sydney
+SUP_047,Vanguard Wholesale (Home & Kitchen),PROD_HOM_004,185.58,8,100,1583,0.83,Mumbai
+SUP_048,Pacific Traders (Home & Kitchen),PROD_HOM_005,259.62,9,10,271,0.92,London
+SUP_049,Apex Supply Corp (Sports),PROD_SPO_001,298.6,9,50,533,0.89,Tokyo
+SUP_050,Vanguard Wholesale (Sports),PROD_SPO_001,309.85,9,50,1809,0.82,New York
+SUP_051,Nexus Distribution (Sports),PROD_SPO_002,67.53,4,10,1644,0.81,Berlin
+SUP_052,Global Logistics Inc (Sports),PROD_SPO_003,32.25,6,25,1069,0.93,Mexico City
+SUP_053,Vanguard Wholesale (Sports),PROD_SPO_004,27.72,8,25,1340,0.92,Toronto
+SUP_054,Nexus Distribution (Sports),PROD_SPO_005,275.49,3,50,1279,0.93,Sydney
+SUP_055,Apex Supply Corp (Toys),PROD_TOY_001,51.2,14,25,308,0.93,Paris
+SUP_056,Pacific Traders (Toys),PROD_TOY_001,57.35,12,10,811,0.9,Tokyo
+SUP_057,Pacific Traders (Toys),PROD_TOY_002,152.75,3,100,1784,0.89,Sydney
+SUP_058,Vanguard Wholesale (Toys),PROD_TOY_003,123.49,9,25,1602,0.9,Paris
+SUP_059,Pacific Traders (Toys),PROD_TOY_003,125.35,11,100,1052,0.88,Mexico City
+SUP_060,Nexus Distribution (Toys),PROD_TOY_004,67.36,4,50,1905,0.89,Mumbai
+SUP_061,Pacific Traders (Toys),PROD_TOY_004,64.99,9,50,158,0.89,Tokyo
+SUP_062,Vanguard Wholesale (Toys),PROD_TOY_005,159.98,7,50,672,0.97,Paris

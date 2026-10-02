@@ -1,0 +1,41 @@
+product_id,product_name,category,subcategory,brand,description,cost_price,selling_price,warranty_days,returnable
+PROD_BEA_001,GlowBeauty Skincare Beauty Item 1 [DEMO],Beauty,Skincare,GlowBeauty,Premium skincare item from GlowBeauty for high-quality retail experience.,209.85,373.91,0,True
+PROD_BEA_002,LuxeAura Skincare Beauty Item 2 [DEMO],Beauty,Skincare,LuxeAura,Premium skincare item from LuxeAura for high-quality retail experience.,237.66,373.48,0,False
+PROD_BEA_003,GlowBeauty Skincare Beauty Item 3 [DEMO],Beauty,Skincare,GlowBeauty,Premium skincare item from GlowBeauty for high-quality retail experience.,33.69,60.35,0,True
+PROD_BEA_004,LuxeAura Haircare Beauty Item 4 [DEMO],Beauty,Haircare,LuxeAura,Premium haircare item from LuxeAura for high-quality retail experience.,209.67,329.54,0,True
+PROD_BEA_005,LuxeAura Fragrance Beauty Item 5 [DEMO],Beauty,Fragrance,LuxeAura,Premium fragrance item from LuxeAura for high-quality retail experience.,107.34,149.64,0,True
+PROD_BOO_001,HarperPulse Self-Help Books Item 1 [DEMO],Books,Self-Help,HarperPulse,Premium self-help item from HarperPulse for high-quality retail experience.,82.79,149.49,0,True
+PROD_BOO_002,PenguinClassics Fiction Books Item 2 [DEMO],Books,Fiction,PenguinClassics,Premium fiction item from PenguinClassics for high-quality retail experience.,117.29,198.88,0,True
+PROD_BOO_003,PenguinClassics Sci-Fi Books Item 3 [DEMO],Books,Sci-Fi,PenguinClassics,Premium sci-fi item from PenguinClassics for high-quality retail experience.,233.45,368.19,0,False
+PROD_BOO_004,OReillyMedia Fiction Books Item 4 [DEMO],Books,Fiction,OReillyMedia,Premium fiction item from OReillyMedia for high-quality retail experience.,103.11,156.9,0,True
+PROD_BOO_005,OReillyMedia Non-Fiction Books Item 5 [DEMO],Books,Non-Fiction,OReillyMedia,Premium non-fiction item from OReillyMedia for high-quality retail experience.,32.37,48.66,0,True
+PROD_CLO_001,UrbanFit Men's Wear Clothing Item 1 [DEMO],Clothing,Men's Wear,UrbanFit,Premium men's wear item from UrbanFit for high-quality retail experience.,258.47,434.38,0,False
+PROD_CLO_002,UrbanFit Outerwear Clothing Item 2 [DEMO],Clothing,Outerwear,UrbanFit,Premium outerwear item from UrbanFit for high-quality retail experience.,107.25,194.17,0,True
+PROD_CLO_003,NordicStyle Men's Wear Clothing Item 3 [DEMO],Clothing,Men's Wear,NordicStyle,Premium men's wear item from NordicStyle for high-quality retail experience.,204.21,322.33,0,True
+PROD_CLO_004,ApexWear Women's Wear Clothing Item 4 [DEMO],Clothing,Women's Wear,ApexWear,Premium women's wear item from ApexWear for high-quality retail experience.,148.47,198.66,0,True
+PROD_CLO_005,UrbanFit Outerwear Clothing Item 5 [DEMO],Clothing,Outerwear,UrbanFit,Premium outerwear item from UrbanFit for high-quality retail experience.,63.94,125.86,0,True
+PROD_ELE_001,SoundVibe Wearables Electronics Item 1 [DEMO],Electronics,Wearables,SoundVibe,Premium wearables item from SoundVibe for high-quality retail experience.,34.26,47.04,365,True
+PROD_ELE_002,NovaGadgets Accessories Electronics Item 2 [DEMO],Electronics,Accessories,NovaGadgets,Premium accessories item from NovaGadgets for high-quality retail experience.,185.07,256.63,180,True
+PROD_ELE_003,TechPulse Smart Home Electronics Item 3 [DEMO],Electronics,Smart Home,TechPulse,Premium smart home item from TechPulse for high-quality retail experience.,86.04,134.37,90,False
+PROD_ELE_004,SoundVibe Wearables Electronics Item 4 [DEMO],Electronics,Wearables,SoundVibe,Premium wearables item from SoundVibe for high-quality retail experience.,90.79,121.15,365,False
+PROD_ELE_005,TechPulse Audio Electronics Item 5 [DEMO],Electronics,Audio,TechPulse,Premium audio item from TechPulse for high-quality retail experience.,232.38,431.77,30,False
+PROD_GRO_001,VitalOrganics Organic Snacks Grocery Item 1 [DEMO],Grocery,Organic Snacks,VitalOrganics,Premium organic snacks item from VitalOrganics for high-quality retail experience.,149.58,199.7,0,True
+PROD_GRO_002,DailyBites Organic Snacks Grocery Item 2 [DEMO],Grocery,Organic Snacks,DailyBites,Premium organic snacks item from DailyBites for high-quality retail experience.,243.92,363.83,0,True
+PROD_GRO_003,NatureHarvest Pantry Essentials Grocery Item 3 [DEMO],Grocery,Pantry Essentials,NatureHarvest,Premium pantry essentials item from NatureHarvest for high-quality retail experience.,84.73,157.05,0,True
+PROD_GRO_004,DailyBites Pantry Essentials Grocery Item 4 [DEMO],Grocery,Pantry Essentials,DailyBites,Premium pantry essentials item from DailyBites for high-quality retail experience.,240.61,383.79,0,True
+PROD_GRO_005,DailyBites Pantry Essentials Grocery Item 5 [DEMO],Grocery,Pantry Essentials,DailyBites,Premium pantry essentials item from DailyBites for high-quality retail experience.,143.32,260.71,0,True
+PROD_HOM_001,KitchenCraft Small Appliances Home & Kitchen Item 1 [DEMO],Home & Kitchen,Small Appliances,KitchenCraft,Premium small appliances item from KitchenCraft for high-quality retail experience.,348.13,476.49,0,True
+PROD_HOM_002,ChefPro Decor Home & Kitchen Item 2 [DEMO],Home & Kitchen,Decor,ChefPro,Premium decor item from ChefPro for high-quality retail experience.,40.84,69.14,90,True
+PROD_HOM_003,ChefPro Cookware Home & Kitchen Item 3 [DEMO],Home & Kitchen,Cookware,ChefPro,Premium cookware item from ChefPro for high-quality retail experience.,324.13,439.96,0,False
+PROD_HOM_004,KitchenCraft Cookware Home & Kitchen Item 4 [DEMO],Home & Kitchen,Cookware,KitchenCraft,Premium cookware item from KitchenCraft for high-quality retail experience.,205.21,385.66,180,True
+PROD_HOM_005,KitchenCraft Bedding Home & Kitchen Item 5 [DEMO],Home & Kitchen,Bedding,KitchenCraft,Premium bedding item from KitchenCraft for high-quality retail experience.,264.89,437.26,30,True
+PROD_SPO_001,TrailBlazer Athletic Apparel Sports Item 1 [DEMO],Sports,Athletic Apparel,TrailBlazer,Premium athletic apparel item from TrailBlazer for high-quality retail experience.,329.02,496.65,180,False
+PROD_SPO_002,ProAthlete Fitness Equipment Sports Item 2 [DEMO],Sports,Fitness Equipment,ProAthlete,Premium fitness equipment item from ProAthlete for high-quality retail experience.,72.33,123.75,365,True
+PROD_SPO_003,ProAthlete Outdoor Gear Sports Item 3 [DEMO],Sports,Outdoor Gear,ProAthlete,Premium outdoor gear item from ProAthlete for high-quality retail experience.,32.47,49.36,30,True
+PROD_SPO_004,TrailBlazer Fitness Equipment Sports Item 4 [DEMO],Sports,Fitness Equipment,TrailBlazer,Premium fitness equipment item from TrailBlazer for high-quality retail experience.,27.58,49.29,180,True
+PROD_SPO_005,FlexGear Outdoor Gear Sports Item 5 [DEMO],Sports,Outdoor Gear,FlexGear,Premium outdoor gear item from FlexGear for high-quality retail experience.,300.68,467.79,180,True
+PROD_TOY_001,FunZone Educational Toys Toys Item 1 [DEMO],Toys,Educational Toys,FunZone,Premium educational toys item from FunZone for high-quality retail experience.,56.18,107.16,0,False
+PROD_TOY_002,FunZone Puzzles Toys Item 2 [DEMO],Toys,Puzzles,FunZone,Premium puzzles item from FunZone for high-quality retail experience.,153.19,213.97,0,True
+PROD_TOY_003,PlayQuest Board Games Toys Item 3 [DEMO],Toys,Board Games,PlayQuest,Premium board games item from PlayQuest for high-quality retail experience.,122.74,209.87,0,True
+PROD_TOY_004,PlayQuest Action Figures Toys Item 4 [DEMO],Toys,Action Figures,PlayQuest,Premium action figures item from PlayQuest for high-quality retail experience.,65.54,107.06,0,False
+PROD_TOY_005,FunZone Action Figures Toys Item 5 [DEMO],Toys,Action Figures,FunZone,Premium action figures item from FunZone for high-quality retail experience.,171.69,238.91,0,True

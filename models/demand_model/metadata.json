@@ -1,0 +1,62 @@
+{
+  "model_name": "Random Forest Regressor",
+  "saved_at": "2026-10-02T08:23:42.980311",
+  "model_path": "models/demand_model\\best_model.pkl",
+  "feature_count": 27,
+  "metrics": {
+    "MAE": 2.2501,
+    "RMSE": 2.8285,
+    "R2": 0.0666,
+    "MAPE": 33.43
+  },
+  "extra_info": {
+    "all_results": {
+      "Linear Regression": {
+        "val_metrics": {
+          "MAE": 2.3508,
+          "RMSE": 2.9066,
+          "R2": 0.0054,
+          "MAPE": 35.84
+        },
+        "test_metrics": {
+          "MAE": 2.3334,
+          "RMSE": 2.9352,
+          "R2": -0.0051,
+          "MAPE": 35.03
+        }
+      },
+      "Random Forest Regressor": {
+        "val_metrics": {
+          "MAE": 2.2494,
+          "RMSE": 2.774,
+          "R2": 0.0941,
+          "MAPE": 33.28
+        },
+        "test_metrics": {
+          "MAE": 2.2501,
+          "RMSE": 2.8285,
+          "R2": 0.0666,
+          "MAPE": 33.43
+        }
+      },
+      "XGBoost Regressor": {
+        "val_metrics": {
+          "MAE": 2.2561,
+          "RMSE": 2.7906,
+          "R2": 0.0832,
+          "MAPE": 33.94
+        },
+        "test_metrics": {
+          "MAE": 2.2658,
+          "RMSE": 2.8392,
+          "R2": 0.0595,
+          "MAPE": 33.57
+        }
+      }
+    },
+    "train_samples": 3920,
+    "val_samples": 840,
+    "test_samples": 848,
+    "splitting_strategy": "Chronological Time-Aware Split (70/15/15)"
+  }
+}

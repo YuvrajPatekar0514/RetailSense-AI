@@ -1,0 +1,101 @@
+customer_id,customer_name,city,age_group,preferred_category,budget_range,loyalty_level
+CUST_001,Ava Allen,Sydney,45-59,Beauty,High ($500+),Silver
+CUST_002,Ava Anderson,Sao Paulo,18-29,Electronics,High ($500+),Platinum
+CUST_003,Ava Clark,Toronto,45-59,Electronics,High ($500+),Platinum
+CUST_004,Ava Hall,Paris,45-59,Toys,Medium ($100-$500),Bronze
+CUST_005,Ava Harris,Berlin,18-29,Grocery,Low (<$100),Platinum
+CUST_006,Ava Lewis,Mumbai,60+,Electronics,Medium ($100-$500),Gold
+CUST_007,Ava Rodriguez,Tokyo,45-59,Home & Kitchen,Medium ($100-$500),Gold
+CUST_008,Ava Thompson,Mexico City,30-44,Toys,Medium ($100-$500),Gold
+CUST_009,Ava Walker,London,30-44,Electronics,Low (<$100),Silver
+CUST_010,Ava White,New York,30-44,Books,High ($500+),Silver
+CUST_011,Elijah Allen,Sydney,30-44,Electronics,High ($500+),Platinum
+CUST_012,Elijah Anderson,Sao Paulo,30-44,Grocery,Low (<$100),Silver
+CUST_013,Elijah Clark,Toronto,30-44,Electronics,Medium ($100-$500),Silver
+CUST_014,Elijah Hall,Paris,30-44,Beauty,High ($500+),Silver
+CUST_015,Elijah Harris,Berlin,30-44,Beauty,Low (<$100),Gold
+CUST_016,Elijah Lewis,Mumbai,60+,Clothing,High ($500+),Platinum
+CUST_017,Elijah Rodriguez,Tokyo,18-29,Beauty,High ($500+),Gold
+CUST_018,Elijah Thompson,Mexico City,45-59,Toys,Medium ($100-$500),Gold
+CUST_019,Elijah Walker,London,18-29,Beauty,Medium ($100-$500),Platinum
+CUST_020,Elijah White,New York,18-29,Books,Medium ($100-$500),Platinum
+CUST_021,Emma Allen,Sydney,18-29,Beauty,Low (<$100),Silver
+CUST_022,Emma Anderson,Sao Paulo,60+,Grocery,Low (<$100),Silver
+CUST_023,Emma Clark,Toronto,18-29,Sports,High ($500+),Silver
+CUST_024,Emma Hall,Paris,60+,Sports,Medium ($100-$500),Platinum
+CUST_025,Emma Harris,Berlin,30-44,Sports,Medium ($100-$500),Bronze
+CUST_026,Emma Lewis,Mumbai,45-59,Books,Low (<$100),Silver
+CUST_027,Emma Rodriguez,Tokyo,30-44,Books,Low (<$100),Silver
+CUST_028,Emma Thompson,Mexico City,18-29,Books,Low (<$100),Bronze
+CUST_029,Emma Walker,London,30-44,Toys,High ($500+),Platinum
+CUST_030,Emma White,New York,30-44,Beauty,Low (<$100),Gold
+CUST_031,Isabella Allen,Sydney,60+,Grocery,High ($500+),Platinum
+CUST_032,Isabella Anderson,Sao Paulo,18-29,Electronics,Medium ($100-$500),Silver
+CUST_033,Isabella Clark,Toronto,45-59,Books,High ($500+),Silver
+CUST_034,Isabella Hall,Paris,45-59,Clothing,Medium ($100-$500),Silver
+CUST_035,Isabella Harris,Berlin,18-29,Beauty,Low (<$100),Gold
+CUST_036,Isabella Lewis,Mumbai,45-59,Grocery,Medium ($100-$500),Bronze
+CUST_037,Isabella Rodriguez,Tokyo,45-59,Grocery,High ($500+),Platinum
+CUST_038,Isabella Thompson,Mexico City,30-44,Toys,Medium ($100-$500),Bronze
+CUST_039,Isabella Walker,London,45-59,Beauty,Medium ($100-$500),Gold
+CUST_040,Isabella White,New York,45-59,Grocery,Low (<$100),Bronze
+CUST_041,James Allen,Sydney,30-44,Beauty,High ($500+),Gold
+CUST_042,James Anderson,Sao Paulo,45-59,Beauty,Low (<$100),Platinum
+CUST_043,James Clark,Toronto,45-59,Toys,Medium ($100-$500),Silver
+CUST_044,James Hall,Paris,45-59,Sports,High ($500+),Platinum
+CUST_045,James Harris,Berlin,18-29,Toys,Medium ($100-$500),Platinum
+CUST_046,James Lewis,Mumbai,30-44,Home & Kitchen,High ($500+),Bronze
+CUST_047,James Rodriguez,Tokyo,18-29,Home & Kitchen,Medium ($100-$500),Platinum
+CUST_048,James Thompson,Mexico City,30-44,Sports,High ($500+),Bronze
+CUST_049,James Walker,London,45-59,Books,Medium ($100-$500),Gold
+CUST_050,James White,New York,30-44,Books,Medium ($100-$500),Bronze
+CUST_051,Liam Allen,Sydney,60+,Toys,Medium ($100-$500),Bronze
+CUST_052,Liam Anderson,Sao Paulo,30-44,Home & Kitchen,High ($500+),Platinum
+CUST_053,Liam Clark,Toronto,45-59,Toys,Low (<$100),Silver
+CUST_054,Liam Hall,Paris,30-44,Clothing,Medium ($100-$500),Platinum
+CUST_055,Liam Harris,Berlin,60+,Toys,Low (<$100),Bronze
+CUST_056,Liam Lewis,Mumbai,45-59,Electronics,High ($500+),Silver
+CUST_057,Liam Rodriguez,Tokyo,30-44,Beauty,High ($500+),Platinum
+CUST_058,Liam Thompson,Mexico City,18-29,Electronics,Low (<$100),Platinum
+CUST_059,Liam Walker,London,18-29,Clothing,Medium ($100-$500),Gold
+CUST_060,Liam White,New York,45-59,Grocery,Medium ($100-$500),Platinum
+CUST_061,Noah Allen,Sydney,45-59,Electronics,Medium ($100-$500),Silver
+CUST_062,Noah Anderson,Sao Paulo,30-44,Electronics,High ($500+),Silver
+CUST_063,Noah Clark,Toronto,18-29,Grocery,Medium ($100-$500),Gold
+CUST_064,Noah Hall,Paris,60+,Grocery,Low (<$100),Gold
+CUST_065,Noah Harris,Berlin,60+,Grocery,High ($500+),Platinum
+CUST_066,Noah Lewis,Mumbai,18-29,Toys,High ($500+),Platinum
+CUST_067,Noah Rodriguez,Tokyo,30-44,Home & Kitchen,High ($500+),Platinum
+CUST_068,Noah Thompson,Mexico City,45-59,Home & Kitchen,Low (<$100),Silver
+CUST_069,Noah Walker,London,45-59,Sports,Low (<$100),Platinum
+CUST_070,Noah White,New York,18-29,Home & Kitchen,High ($500+),Platinum
+CUST_071,Oliver Allen,Sydney,60+,Sports,Medium ($100-$500),Silver
+CUST_072,Oliver Anderson,Sao Paulo,45-59,Beauty,Low (<$100),Gold
+CUST_073,Oliver Clark,Toronto,18-29,Toys,Low (<$100),Platinum
+CUST_074,Oliver Hall,Paris,18-29,Clothing,Medium ($100-$500),Silver
+CUST_075,Oliver Harris,Berlin,18-29,Toys,Medium ($100-$500),Gold
+CUST_076,Oliver Lewis,Mumbai,45-59,Sports,High ($500+),Bronze
+CUST_077,Oliver Rodriguez,Tokyo,30-44,Sports,Medium ($100-$500),Platinum
+CUST_078,Oliver Thompson,Mexico City,45-59,Beauty,High ($500+),Bronze
+CUST_079,Oliver Walker,London,30-44,Grocery,Low (<$100),Bronze
+CUST_080,Oliver White,New York,45-59,Books,High ($500+),Bronze
+CUST_081,Olivia Allen,Sydney,45-59,Clothing,High ($500+),Gold
+CUST_082,Olivia Anderson,Sao Paulo,18-29,Beauty,Medium ($100-$500),Bronze
+CUST_083,Olivia Clark,Toronto,30-44,Home & Kitchen,Medium ($100-$500),Platinum
+CUST_084,Olivia Hall,Paris,18-29,Electronics,High ($500+),Platinum
+CUST_085,Olivia Harris,Berlin,45-59,Clothing,Low (<$100),Silver
+CUST_086,Olivia Lewis,Mumbai,18-29,Sports,High ($500+),Silver
+CUST_087,Olivia Rodriguez,Tokyo,45-59,Clothing,Low (<$100),Platinum
+CUST_088,Olivia Thompson,Mexico City,45-59,Grocery,Medium ($100-$500),Gold
+CUST_089,Olivia Walker,London,60+,Beauty,Medium ($100-$500),Gold
+CUST_090,Olivia White,New York,60+,Clothing,Low (<$100),Platinum
+CUST_091,Sophia Allen,Sydney,30-44,Grocery,High ($500+),Platinum
+CUST_092,Sophia Anderson,Sao Paulo,60+,Grocery,Medium ($100-$500),Gold
+CUST_093,Sophia Clark,Toronto,30-44,Sports,Medium ($100-$500),Bronze
+CUST_094,Sophia Hall,Paris,30-44,Sports,High ($500+),Gold
+CUST_095,Sophia Harris,Berlin,45-59,Grocery,High ($500+),Gold
+CUST_096,Sophia Lewis,Mumbai,18-29,Sports,Medium ($100-$500),Bronze
+CUST_097,Sophia Rodriguez,Tokyo,45-59,Beauty,High ($500+),Platinum
+CUST_098,Sophia Thompson,Mexico City,30-44,Electronics,High ($500+),Gold
+CUST_099,Sophia Walker,London,30-44,Electronics,High ($500+),Gold
+CUST_100,Sophia White,New York,60+,Clothing,High ($500+),Bronze
